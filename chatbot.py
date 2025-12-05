@@ -2,17 +2,17 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 
 # 1. Setup the Model
-# We use the exact name of the model you downloaded: "deepseek-r1:7b"
+
 llm = ChatOllama(
-    model="deepseek-r1:7b", 
-    temperature=0.6,  # Reasoning models work best with lower temperature (0.5 - 0.7)
+    model="llama3.2:1b", # You can change this to any Ollama model you have
+    temperature=0,
 )
 
 chat_history = [
     SystemMessage(content='You are a helpful AI assistant.')
 ]
 
-print("✅ DeepSeek R1 (7B) is ready! Type 'exit' to quit.")
+print("✅Your Chatbot is ready! Type 'exit' to quit.")
 print("-" * 50)
 
 while True:
